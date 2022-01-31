@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MvcNetCoreWeb.Controllers
 {
-    public class Category : Controller
+    public class CategoryController : Controller
     {
         public IActionResult Index()
         {
