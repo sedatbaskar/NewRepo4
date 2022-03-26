@@ -33,16 +33,20 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+<<<<<<< HEAD
         public List<Blog> GetBlogListWithCategory()
         {
             return _blogDal.GetListWithCategory();
         }
 
+=======
+>>>>>>> e726a4710b88cb61c8f1ae12c82d6fdaa32a8bb5
         public Blog GetById(int id)
         {
             throw new NotImplementedException();
         }
 
+<<<<<<< HEAD
         public List<Blog> GetBlogByID(int id) //Blogları id'ye göre listeleme
         {
             return _blogDal.GetListAll(x => x.BlogID == id);
@@ -65,5 +69,11 @@ namespace BusinessLayer.Concrete
 
             return _blogDal.GetListAll(x => x.WriterID == id);
         }
+=======
+        public List<Blog> GetList()
+        {
+            return _blogDal.GetListAll();
+        }
+>>>>>>> e726a4710b88cb61c8f1ae12c82d6fdaa32a8bb5
     }
 }
