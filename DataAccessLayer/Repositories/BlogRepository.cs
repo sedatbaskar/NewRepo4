@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.Abstract;
@@ -9,7 +10,7 @@ using EntityLayer.Concrete;
 
 namespace DataAccessLayer.Repositories
 {
-    class BlogRepository : IBlogDal
+  public  class BlogRepository : IBlogDal
     {
         public void AddBlog(Blog blog)
         {
@@ -41,6 +42,16 @@ namespace DataAccessLayer.Repositories
         }
 
         public List<Blog> GetListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Blog> GetListAll(Expression<Func<Blog, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Blog> GetListWithCategory()
         {
             throw new NotImplementedException();
         }

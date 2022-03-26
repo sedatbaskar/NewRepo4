@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MvcNetCoreWeb.Controllers
+namespace MvcNetCoreWeb.ViewComponents.Writer
 {
-
-    public class ErrorPageController : Controller
+    public class WriterMessageNotificaiton : ViewComponent
     {
-        public IActionResult Error1(int code)
+        public IViewComponentResult Invoke()
         {
             return View();
         }
+
     }
 }

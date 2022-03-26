@@ -14,11 +14,10 @@ namespace BusinessLayer.Abstract
         void BlogUpdate(Blog blog);
         List<Blog> GetList();
         Blog GetById(int id);
-<<<<<<< HEAD
+
         List<Blog> GetBlogListWithCategory();
         List<Blog> GetBlogByWriter(int id);
         
-=======
->>>>>>> e726a4710b88cb61c8f1ae12c82d6fdaa32a8bb5
+
     }
 }
