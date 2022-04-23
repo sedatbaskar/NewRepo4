@@ -42,7 +42,7 @@
                             @Html.ValidationMessageFor(x => x.WriterPassword, "", new { @class = "text-danger" })
 
                             @*<input type="password" class="form-control"
-                                name="WriterPassword" id="password1" placeholder="" required="">*@
+            name="WriterPassword" id="password1" placeholder="" required="">*@
                         </div>
 
 
@@ -52,29 +52,29 @@
                             @Html.ValidationMessageFor(x => x.WriterImage, "", new { @class = "text-danger" })
 
                             @*<input type="text" class="form-control" name="WriterImage "
-                                id="password2" placeholder="" required="">*@
+            id="password2" placeholder="" required="">*@
                         </div>
 
 
 
 
+                        <p>
+                            <a href="#" id="btn1"> Tüm şartları Kabul Ediyorum </a>
+                            <script>
+                                $('#btn1').click(function () {
 
+                                    swal("Site Kabul Şartları", "Sistemizde verdiğiniz mail üzerinden bilgilendirme yapılır.");
+                                });
+
+                                                        //ders 36 6.20
+                            </script>
+                        </p>
 
 
                     </div>
                     <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
 
-                    <p>
-                        <a href="#" id="btn1" > Tüm şartları Kabul Ediyorum </a> 
-                        <script>
-                            $('#btn1').click(function () {
-
-                                swal("Site Kabul Şartları","Sistemizde verdiğiniz mail üzerinden bilgilendirme yapılır.");
-                            });
-
-                            //ders 36 6.20
-                        </script>
-                    </p>
+                    
                 }
 
             </div>

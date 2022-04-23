@@ -13,7 +13,7 @@ namespace MvcNetCoreWeb.Controllers
         AboutManager abm = new AboutManager(new EfAboutRepository());
         public IActionResult Index()
         {
-            var values = abm.GetList();
+            var values = abm.TGetList();
             return View(values);
         }
 

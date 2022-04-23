@@ -21,7 +21,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterName).MaximumLength(50).WithMessage("Lütfen en fazla 50 karakter girişi yapın");
 
 
-             bool IsPasswordValid(string arg)
+            bool IsPasswordValid(string arg)
             {
                 try
                 {

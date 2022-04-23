@@ -1,0 +1,73 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{ string color = " ";}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                        <i class="mdi mdi-cast-connected"></i>
+                    </span> Kategori Listesi
+                </h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Kategori Adı </th>
+                                <th> Durum </th>
+                                <th> İşlemler </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (item.CategoryName == "Yazılım")
+                                {
+                                    color = "post-category text-white bg-danger mb-3";
+                                }
+                                if (item.CategoryName == "Teknoloji")
+                                {
+                                    color = "post-category text-white bg-info mb-3";
+                                }
+                                if (item.CategoryName == "Asp.Net Core")
+                                {
+                                    color = "post-category text-white bg-warning mb-3";
+                                }
+                                if (item.CategoryName == "C#")
+                                {
+                                    color = "post-category text-white bg-primary mb-3";
+                                }
+                                if (item.CategoryName == "CSS")
+                                {
+                                    color = "post-category text-white bg-success mb-3";
+                                }
+                                if (item.CategoryName == "MVC")
+                                {
+                                    color = "post-category text-white bg-secondary mb-3";
+                                }
+                                if (item.CategoryName == "Java")
+                                {
+                                    color = "post-category text-white bg-primary mb-3";
+                                }
+                                <tr>
+                                    <td> @item.CategoryID </td>
+                                    <td>   <h6 class="@color"> @item.CategoryName  </h6></td>
+                                    <td> @item.CategoryStatus </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,86 @@
+﻿
+@using EntityLayer.Concrete
+@model List<Blog>
+@{ string color = " ";}
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                        <i class="mdi mdi-blogger"></i>
+                    </span> En Son Yazılan Bloglarınız
+                </h3>
+               <br />
+                <div class="table-responsive">
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Başlık </th>
+                                <th> Kategori </th>
+                                <th> Tarih </th>
+                                <th>Detaylar</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                if (item.BlogID % 2 == 0)
+                                {
+                                    color = "badge badge-success";
+                                }
+                                else
+                                {
+                                    color = "badge badge-warning";
+                                }
+
+                                <tr>
+                                    <td>
+                                        <img src="@item.BlogImage" class="mr-2" alt="image">
+
+                                    </td>
+                                    <td class="stil">
+
+                                        @item.BlogTitle
+                                    </td>
+                                    <td>
+                                        <label class="@color"> @item.Category.CategoryName</label>
+                                    </td>
+                                    <td> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+
+                                    <td>
+                                        <a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-info">Detaylar</a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

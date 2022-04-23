@@ -30,7 +30,7 @@ namespace MvcNetCoreWeb.Controllers
             {
                 p.WriterAbout = "Deneme test";
                 p.WriterStatus = true;
-                wm.WriterAdd(p);
+                wm.TAdd(p);
                 return RedirectToAction("Index,Blog");
 
             }
